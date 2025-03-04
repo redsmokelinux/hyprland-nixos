@@ -1,0 +1,274 @@
+* {
+  border: none;
+  border-radius: 0px;
+  /*font-family: "'Font Awesome 5 Free', 'FiraCode Nerd Font'";*/
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+/* color */
+
+/* @define-color disk #15c792; green */
+/* background-color: rgba(15, 22, 30, 0.3); */
+
+/* @define-color disk #15c792; */
+
+window#waybar {
+  background-color: rgba(255, 255, 255, 0 );
+  color: #cdd6f4;
+  border-radius: 0px;
+  border-bottom: 3px solid #273341;
+  border-radius: 0px 0px 0px 0px;
+  transition-property: background-color;
+}
+
+tooltip {
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+
+#custom-nixos{
+  padding-left: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+
+
+#workspaces,
+#disk,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#clock,
+#bluetooth,
+#battery,
+#tray {
+
+  padding-left: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 5px;
+
+
+}
+
+#custom-disk-icon,
+#custom-cpu-icon,
+#custom-memory-icon,
+#custom-clock-icon,
+#custom-backlight-icon,
+#custom-temperature-icon,
+#pulseaudio {
+
+  padding-left: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 0px;
+
+}
+
+
+
+#workspaces {
+  /* padding: 3px 8px; */
+  padding-left: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 2px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
+  background-color: #273341;
+  /* background-color: #2b2a3a;
+  border-right: 3px solid #E0E0E0; */
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+#workspaces button.empty {
+  color: #fcfcfc;
+  /* padding: 5px 5px; */
+  /* background-color: #283456; */
+}
+
+#workspaces button.empty:hover {
+  color: #fcfcfc;
+  background-color: rgba(198, 165, 247, 0.1);
+  border-radius: 50px;
+}
+
+
+#workspaces button {
+  color: #85e69c;
+  padding-left: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+}
+
+#workspaces button:hover {
+  color: #85e69c;
+  border-radius: 50px;
+  padding-left: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  border-bottom: 2px solid #C6E4EE;
+  padding-left: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+}
+
+
+#disk {
+  /* padding: 5px 10px; */
+  background-color: #ffffff;
+  color: #32757A;
+  border: 3px solid #32757A;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-disk-icon {
+
+  background-color: #32757A;
+  border-radius: 10px 0px 0px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#pulseaudio {
+  background-color: #11252D;
+  border-radius: 10px 0px 0px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#bluetooth {
+  background-color: #ffffff;
+  color: #11252D;
+  border: 3px solid #11252D;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#battery {
+  background-color: #ffffff;
+  color: #1b85af;
+  border: 3px solid #1b85af;
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+#cpu {
+  background-color: #ffffff;
+  color: #1f4d46;
+  border: 3px solid #1f4d46;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-cpu-icon {
+  background-color: #1f4d46;
+  border-radius: 10px 0px 0px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#memory {
+  background-color: #ffffff;
+  color: #90B0A3;
+  border: 3px solid #90B0A3;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-memory-icon {
+  background-color: #90B0A3;
+  border-radius: 10px 0px 0px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#temperature {
+  background-color: #ffffff;
+  color: #0C242D;
+  border: 3px solid #0C242D;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-temperature-icon {
+
+  background-color: #0C242D;
+  border-radius: 10px 0px 0px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#backlight {
+  background-color: #ffffff;
+  color: #d2a18d;
+  border: 3px solid #d2a18d;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-backlight-icon {
+  background-color: #d2a18d;
+  border-radius: 10px 0px 0px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+#clock {
+  background-color: #ffffff;
+  color: #0b9dbd;
+  border: 3px solid #0b9dbd;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-clock-icon {
+
+  background-color: #0b9dbd;
+  border-radius: 10px 0px 0px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#tray {
+  background-color: #273341;
+  color: #15c792;
+  border-radius: 10px 10px 10px 10px;
+}

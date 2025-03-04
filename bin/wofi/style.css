@@ -1,0 +1,46 @@
+* {
+  border-radius: 10px;
+  border: none;
+}
+
+window {
+  font-size: 20px;
+  font-family: "Fira Mono";
+  font-weight: 300;
+  background-color: rgba(30, 34, 42, 0.9);
+  /* border: 3px solid linear-gradient(90deg, #2e718b, #b53232);; */
+}
+
+#entry {
+  padding: 0.25rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+#entry:selected {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #bbccdd;
+  background: linear-gradient(90deg, #2e718b, #b53232);
+  /* color: #080808; */
+}
+
+#text:selected {
+  color: #080808;
+}
+
+#input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(30, 34, 42, 0.2);
+  background: linear-gradient(90deg, #1c91c0, #b53232);
+  color: white;
+  padding: 0.25rem;
+  
+}
+
+image {
+  margin-left: 0.25rem;
+  margin-right: 0.5rem;
+}

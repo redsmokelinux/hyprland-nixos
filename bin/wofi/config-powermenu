@@ -1,0 +1,5 @@
+allow_images=true
+images_size = 55
+width=30%
+height=25%
+gtk_dark=true

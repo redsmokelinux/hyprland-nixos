@@ -1,0 +1,289 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 10, // Waybar height (to be removed for auto height)
+    "width": 1900, // Waybar width
+    "margin-top": 10,
+    "enable-click":true,
+    // "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    // "modules-center": [
+    //     "hyprland/window"
+    // ],
+    "modules-right": [
+        "custom/disk-home",
+        "disk-root",
+        "disk",
+        "custom/dunst",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        "battery",
+        "clock",
+        "tray"
+        
+    ],
+    // Modules configuration
+    // "wlr/workspaces": {
+    //     "disable-scroll": false,
+    //     // enable-bar-scroll
+    //     "all-outputs": "activate",
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "2": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "3": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "4": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "5": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "6": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "7": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "8": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "9": "<span font='Font Awesome 5 Free Solid'></span>",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+
+    "hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": "activate",
+		"on-click": "activate",
+		"format": "{icon}",
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": []
+		},
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"urgent": ""
+		}
+	},
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{used:0.1f}G <span font='Font Awesome 5 Free Solid'></span>"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+
+    "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false,
+        "on-click": "gnome-power-statistics"
+    },
+
+    // "pulseaudio": {
+    //     "format": "{icon} {volume}%",
+    //     "tooltip": false,
+    //     "format-muted": " Muted",
+    //     "on-click": "pamixer -t",
+    //     "on-scroll-up": "pamixer -i 5",
+    //     "on-scroll-down": "pamixer -d 5",
+    //     "scroll-step": 5,
+    //     "format-icons": {
+    //         "headphone": "",
+    //         "hands-free": "",
+    //         "headset": "",
+    //         "phone": "",
+    //         "portable": "",
+    //         "car": "",
+    //         "default": ["", "", "", ""]
+    //     }
+    // },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+ 
+    "pulseaudio": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}% - {desc}",
+        "format-bluetooth": "<span font='Font Awesome 5 Free 11'> {icon:2}</span>{volume:4}% - {desc}",
+        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}%",
+        "format-alt-click": "click-right",
+        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
+        "format-icons": {
+            "headphone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    
+    // "disk-root": {
+    //     "interval": 30,
+    //     "format": "{free}G ",
+    //     "path": "/"
+    // },
+    //  "disk-home": {
+    //     "interval": 30,
+    //     "format": "{free}G ",
+    //     "path": "/home"
+    // }, 
+    // "disk-workspaces": {
+    //     "interval": 30,
+    //     "format": "{free}G ",
+    //     "path": "/mnt/workspaces"
+    // },
+
+    "disk": {
+        "interval": 30,
+        "format": "{free}G ",
+        "path": "/mnt/d8d323ef-d4ce-4cea-9e02-56767623795d"
+        
+    }, 
+    // "disk1": {
+    //     "interval": 30,
+    //     "format": "{free}G ",
+    //     "path": "/home"
+    // },
+
+    "custom/disk-root": {
+        "format": "{icon} {}",
+        // "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "default": ""
+        },
+        "escape": true,
+        "exec": "df -h | grep '/$' | awk '{print $4}' > /dev/null" 
+    },
+
+// "custom/disk-home": {
+//         "format": "{icon} {}",
+//         "return-type": "string",
+//         "max-length": 40,
+//         "format-icons": {
+//             "default": ""
+//         },
+//         "escape": true,
+//         "exec": "$HOME/Desktop/Hyprland/waybar/script/disk-home.sh > /dev/null" 
+//     },
+
+    "custom/disk-home": {
+        "format": "{icon} {}",
+        "exec": "df -h | grep '/home$' | awk '{print $4}' > /dev/null",
+        // "exec-if": "test -d /proc/sys/net/ipv4/conf/tun0",
+        "return-type": "json",
+        "interval": 5
+    },
+
+"custom/lock": {
+    "format": "{icon} {}",
+    "return-type": "string",
+    "max-length": 40,
+    "format-icons": {
+        "default": ""
+    },
+    "escape": true,
+    "exec": "$HOME/Desktop/Hyprland/waybar/script/disk-home.sh > /dev/null" 
+},
+
+    "custom/vpn": {
+        "format": "VPN ",
+        "exec": "echo '{\"class\": \"connected\"}'",
+        // "exec-if": "test -d /proc/sys/net/ipv4/conf/tun0",
+        "return-type": "json",
+        "interval": 5
+    },
+
+    "custom/dunst": {
+        "exec": "~/.config/waybar/scripts/dunst.sh",
+        "on-click": "dunstctl set-paused toggle",
+        "restart-interval": 1
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}

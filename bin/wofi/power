@@ -1,0 +1,13 @@
+#! /bin/sh
+
+chosen=$(printf "  Power Off\n  Restart\n  Lock" | wofi -dmenu --style=$HOME/bin/wofi/style-powermenu.css --conf=$HOME/bin/wofi/config-powermenu)
+
+case "$chosen" in
+	"  Power Off") systemctl poweroff ;;
+	"  Restart") systemctl reboot ;;
+	# "  Suspend") systemctl suspend-then-hibernate ;;
+	# "  Hibernate") systemctl hibernate ;;
+	# "  Reload") bspc wm -r ;;
+	"  Lock") slock ;;
+	*) exit 1 ;;
+esac

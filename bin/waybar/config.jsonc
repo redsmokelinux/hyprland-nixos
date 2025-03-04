@@ -1,0 +1,174 @@
+{
+  "layer": "bottom", // Waybar at bottom layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": "auto", // Waybar height (to be removed for auto height)
+  "width": "auto", // Waybar width - "width": 1900,
+  "margin-top": "auto",
+  "enable-click": true,
+  "reload_style_on_change": true,
+  // "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["custom/nixos", "hyprland/workspaces", "hyprland/window"],
+  // "modules-center": [
+  //     "hyprland/window"
+  // ],
+  "modules-right": [
+   "custom/disk-icon",
+    "disk",
+    "pulseaudio",
+    "bluetooth",
+    "custom/cpu-icon",
+    "cpu",
+    "custom/memory-icon",
+    "memory",
+    "custom/temperature-icon",
+    "temperature",
+    "custom/battery-icon",
+    "battery",
+    "custom/backlight-icon",
+    "backlight",
+    "custom/clock-icon",
+    "clock",
+    "tray"
+  ],
+  
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": "activate",
+    "on-click": "activate",
+    "active-only": "activate",
+    "format": "{icon}",
+     "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "urgent": ""
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": []
+    }
+   
+  },
+
+
+"custom/nixos": {
+  "format": "<span></span>"
+},
+
+"disk": {
+	"interval": 30,
+	"format": "{free}",
+	"unit": "GB",
+  "path": "/home"
+},
+
+  "custom/disk-icon": {
+    "format": "<span></span>"
+  },
+
+
+  "pulseaudio": {
+    "format": "<span>{icon:2}</span>{volume:4}%",
+    // "format-bluetooth": "<span> {icon:2}</span>{volume:4}% - {desc}",
+    "format-alt": "<span>{icon:2}</span>{volume:4}% - {desc}",
+    // "format-alt-click": "click-right",
+    "format-muted": "<span></span>",
+    "format-icons": {
+      "headphone": [" ", " ", " ", " "],
+      "default": ["", "", "", ""]
+    },
+    "scroll-step": 2,
+    "on-click": "pavucontrol",
+    "tooltip": true
+  },
+
+
+  "bluetooth": {
+    "format-connected-battery": "<span font='Font Awesome 6 Free 14'>󰁹</span>{icon:1}<span font='Font Awesome 6 Free 11'></span> - {device_battery_percentage}%"
+  },
+
+ "cpu": {
+    "format": "{usage}%",
+    "tooltip": false
+  },
+ 
+ "custom/cpu-icon": {
+    "format": "<span></span>"
+  },
+
+  "memory": {
+    "format": "{used:0.1f}GB"
+  },
+
+ "custom/memory-icon": {
+    "format": "<span></span>"
+  },
+
+    "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C"
+  },
+
+"custom/temperature-icon": {
+    "format": "<span></span>"
+  },
+
+    "battery": {
+    "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%-{time}",
+    "format-icons": ["", "", "", "", ""],
+    "format-time": "{H}h{M}m",
+    "format-charging": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% {time}",
+    "format-full": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> Charged",
+    "interval": 30,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip": false,
+    "on-click": "gnome-power-statistics"
+  },
+
+
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}%"
+    // "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+"custom/backlight-icon": {
+    "format": "<span></span>"
+  },
+
+    "clock": {
+    // "timezone": "America/New_York",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+
+"custom/clock-icon": {
+    "format": "<span></span>"
+  },
+
+"custom/sep": {
+    "format": "<span>|</span>"
+},
+
+    "tray": {
+    "spacing": 10
+  }
+
+}
