@@ -111,8 +111,6 @@
   cheese
 
 
-
-
   # Themes
   tokyonight-gtk-theme
   andromeda-gtk-theme
@@ -134,29 +132,29 @@
 
   # Filesystem
 
-  fileSystems."/mnt/workspace" = {
-    device = "/dev/disk/by-uuid/d8d323ef-d4ce-4cea-9e02-56767623795d";
-    fsType = "ext4";
-    options = [ "defaults" "x-gvfs-show" "x-gvfs-name=workspace" "x-gvfs-icon=drive-harddisk"  ];
-  };
+  # fileSystems."/mnt/workspace" = {
+  #  device = "/dev/disk/by-uuid/d8d323ef-d4ce-4cea-9e02-56767623795d";
+  # fsType = "ext4";
+  #  options = [ "defaults" "x-gvfs-show" "x-gvfs-name=workspace" "x-gvfs-icon=drive-harddisk"  ];
+  #};
 
-  fileSystems."/mnt/linuxfiles" = {
-    device = "/dev/disk/by-uuid/D812E56A12E54DD6";
-    fsType = "ntfs-3g";
-    options = [ "rw" "nosuid" "nodev" "nofail" "uid=1000" "gid=1000" "x-gvfs-show" "x-gvfs-name =linuxfiles" "x-gvfs-icon=drive-harddisk"  ];
-  }; 
+  # fileSystems."/mnt/linuxfiles" = {
+  #  device = "/dev/disk/by-uuid/D812E56A12E54DD6";
+  #  fsType = "ntfs-3g";
+  #  options = [ "rw" "nosuid" "nodev" "nofail" "uid=1000" "gid=1000" "x-gvfs-show" "x-gvfs-name =linuxfiles" "x-gvfs-icon=drive-harddisk"  ];
+  # }; 
 
-  fileSystems."/mnt/development" = {
-    device = "/dev/disk/by-uuid/5672119772117CC5";
-    fsType = "ntfs-3g";
-    options = [ "rw" "nosuid" "nodev" "nofail" "uid=1000" "gid=1000" "x-gvfs-show" "x-gvfs-name=development" "x-gvfs-icon=drive-harddisk"  ];
-  }; 
+  # fileSystems."/mnt/development" = {
+  #  device = "/dev/disk/by-uuid/5672119772117CC5";
+  #  fsType = "ntfs-3g";
+  #  options = [ "rw" "nosuid" "nodev" "nofail" "uid=1000" "gid=1000" "x-gvfs-show" "x-gvfs-name=development" "x-gvfs-icon=drive-harddisk"  ];
+  # }; 
 
-    fileSystems."/mnt/virtualmachines" = {
-    device = "/dev/disk/by-uuid/1c978fde-b959-44de-be5e-c38914bb6a27";
-    fsType = "ext4";
-    options = [ "defaults" "x-gvfs-show" "x-gvfs-show" "x-gvfs-name=virtualmachines" "x-gvfs-icon=drive-harddisk"  ];
-  };
+  #  fileSystems."/mnt/virtualmachines" = {
+   # device = "/dev/disk/by-uuid/1c978fde-b959-44de-be5e-c38914bb6a27";
+   # fsType = "ext4";
+  #  options = [ "defaults" "x-gvfs-show" "x-gvfs-show" "x-gvfs-name=virtualmachines" "x-gvfs-icon=drive-harddisk"  ];
+  # };
 
 
   # For Electron apps
